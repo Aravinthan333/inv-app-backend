@@ -17,14 +17,14 @@ connectDB();
 
 // Middlewares
 
-// const corsOptions = {
-//   origin: "*",
-//   methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
-//   optionsSuccessStatus: 204,
-// };
-// app.use(cors());
-// app.use(cors(corsOptions));
-app.use(cors({ credentials: true, origin: process.env.FRONTEND_URL }));
+const corsOptions = {
+  origin: "*",
+  methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+  optionsSuccessStatus: 204,
+};
+app.use(cors());
+app.use(cors(corsOptions));
+// app.use(cors({ credentials: true, origin: process.env.FRONTEND_URL }));
 
 app.use(express.json());
 app.use(bodyParser.json());
